@@ -25,7 +25,7 @@ jobs:
       run: az extension add -n azure-cli-ml
 
     - name: attach workspace
-      run: az ml folder attach -w "ml-ws" -g "flask-predict"
+      run: az ml folder attach -w flask-predict -g amittimalsina14_rg_linux_centralus
 
     - name: retrieve the model
       run: az ml model download -t "." --model-id "roberta-sequence:1"
