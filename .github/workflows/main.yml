@@ -57,5 +57,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./
-        tags: ghcr.io/amit-timalsina/ci-cd:latest
+        tags: ghcr.io/amit-timalsina/flask-roberta:latest
         push: true
