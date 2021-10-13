@@ -21,11 +21,11 @@ jobs:
     - name: set auto-install of extensions
       run: az config set extension.use_dynamic_install=yes_without_prompt
 
-    - name: attach workspace
-      run: az ml folder attach -w "ml-ws" -g "flask-predict"
-
     - name: add ml extension
       run: az extension add -n azure-cli-ml
+
+    - name: attach workspace
+      run: az ml folder attach -w "ml-ws" -g "flask-predict"
 
     - name: retrieve the model
       run: az ml model download -t "." --model-id "roberta-sequence:1"
